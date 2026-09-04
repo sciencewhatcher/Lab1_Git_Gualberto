@@ -1,0 +1,26 @@
+Assessment Data
+command
+git checkout -b simulation
+git add main.py
+git commit -m "Simulation branch change"
+git checkout main
+git add main.py
+git commit -m "Main branch change"
+git merge simulation
+
+Conflict text
+<<<<<<< HEAD
+print("Lab 1: Main Control")
+=======
+print("Lab 1: Simulation Control")
+>>>>>>> simulation
+
+History of Simulation
+*   cc1cc25 (HEAD -> main) Resolve merge conflict
+|\
+| * 0a68c15 (simulation) Simulation branch change
+* | b5c76d6 Main branch change
+|/
+* da8284e (origin/main, origin/HEAD) Create README.md
+* ecd3176 (feature-login-Gualberto) Added section Info for Gualberto.
+* 5a65ed1 Initial commit by Student Gualberto
