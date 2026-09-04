@@ -1,0 +1,48 @@
+Exercise 1
+Assessment Data
+command
+git checkout -b simulation
+git add main.py
+git commit -m "Simulation branch change"
+git checkout main
+git add main.py
+git commit -m "Main branch change"
+git merge simulation
+
+Conflict text
+<<<<<<< HEAD
+print("Lab 1: Main Control")
+=======
+print("Lab 1: Simulation Control")
+>>>>>>> simulation
+
+History of Simulation
+*   cc1cc25 (HEAD -> main) Resolve merge conflict
+|\
+| * 0a68c15 (simulation) Simulation branch change
+* | b5c76d6 Main branch change
+|/
+* da8284e (origin/main, origin/HEAD) Create README.md
+* ecd3176 (feature-login-Gualberto) Added section Info for Gualberto.
+* 5a65ed1 Initial commit by Student Gualberto
+
+Exercise 2
+Command: git blame main.py
+Gualberto, Gian C.  2026-09-04 20:23:08 +0800  cc1c
+
+History
+cc1cc253 (Gualberto, Gian C. 2026-09-04 20:23:08 +0800 1) <<<<<<< HEAD
+b5c76d66 (Gualberto, Gian C. 2026-09-04 19:49:37 +0800 2) print("Lab 1: Main Control")
+cc1cc253 (Gualberto, Gian C. 2026-09-04 20:23:08 +0800 3) =======
+0a68c156 (Gualberto, Gian C. 2026-09-04 19:39:56 +0800 4) print("Lab 1: Simulation Control")
+cc1cc253 (Gualberto, Gian C. 2026-09-04 20:23:08 +0800 5) >>>>>>> simulation
+ecd31764 (Gualberto, Gian C. 2026-09-04 18:57:31 +0800 6) print("Author: Gualberto,Gian C.")
+ecd31764 (Gualberto, Gian C. 2026-09-04 18:57:31 +0800 7) print("Student ID: TUPM-26-1130")
+ecd31764 (Gualberto, Gian C. 2026-09-04 18:57:31 +0800 8) print("Class Section: BSECE 1C")
+
+Exercise 3
+Safe deletion command: git branch -d Rogue-Branch
+error: the branch 'Rogue-Branch' is not fully merged
+
+Force deletion command: git branch -D Rogue-Branch
+Deleted branch Rogue-Branch (was 74aec8e).
